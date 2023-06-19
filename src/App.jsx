@@ -8,13 +8,13 @@ import {postsData} from "./mocks/posts"
 
 import TopBar from './components/topBar';
 import Stories from './components/stories';
-import Posts from './components/post';
+import Posts from './components/posts';
 
 
 function App() {
  const [stories, setStories] = useState(storiesData);
  const [posts, setPosts] = useState(postsData);
-
+  console.log(posts);
   return (
     <>  
     <TopBar/>

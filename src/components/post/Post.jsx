@@ -4,6 +4,7 @@ import "./Post.css";
 import { LikeIcon } from "../../icons";
 
 const Post = ({ post }) => {
+  console.log(post);
   const { isLike } = Post;
   const [like, setLike] = useState(isLike);
 
