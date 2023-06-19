@@ -1,4 +1,4 @@
-/* .Stories {
+.Stories {
     position: relative;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -22,4 +22,5 @@
   
   .Stories__Item:last-child {
     padding-right: 12px;
-  } */
+  }
+  

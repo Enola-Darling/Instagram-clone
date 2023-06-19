@@ -1,14 +1,23 @@
-// import { useState } from "react";
+import "./Stories.css";
 
-import "./Stories.css"
-import { storiesData } from "../../mocks/stories";
+import Story from "../story";
 
-const Stories = () => {
-    console.log(storiesData);
-    return (
-      <div>Stories</div>
-     
+
+
+const Stories = ({ stories}) => {
+    return(
+        <div className="Stories">
+            <ul className="Stories__List">
+        {stories &&
+          stories.map((story) => (
+            <li className="Stories__Item" key={story.id}>
+              <Story story={story} />
+            </li>
+          ))}
+      </ul>
+
+        </div>
     );
 };
 
-return Stories;
+export default Stories
