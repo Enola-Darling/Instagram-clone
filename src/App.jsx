@@ -8,6 +8,7 @@ import TopBar from "./components/topBar";
 import Stories from "./components/stories";
 import Posts from "./components/posts";
 import Camera from "./components/Camera/Camera";
+import Chat from "./components/chat";
 
 function App() {
   const [section, setSection] = useState("home");
@@ -43,7 +44,7 @@ function App() {
       case "tv":
         return <h1>TV</h1>;
       case "messages":
-        return <h1>Chat</h1>;
+        return <Chat/>;
     }
   };
 
