@@ -20,3 +20,16 @@
     align-items: center;
     gap: 18px;
   }
+
+.TopBar__Camera,.TopBar__Logo,
+.TopBar__Actions--tv,.TopBar__Actions--msg {
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.TopBar__Camera:active,
+.TopBar__Logo:active,
+.TopBar__Actions--tv:active,
+.TopBar__Actions--msg:active {
+  transform: rotate(359deg);
+}

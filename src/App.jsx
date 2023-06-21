@@ -1,28 +1,58 @@
-import { useState } from 'react';
-import './App.css'
+import { useEffect, useState } from "react";
+import "./App.css";
 
-import { storiesData } from './mocks/stories';
-import { userData } from './mocks/user';
-import {postsData} from "./mocks/posts"
+import { storiesData } from "./mocks/stories";
+import { postsData } from "./mocks/posts";
 
-
-import TopBar from './components/topBar';
-import Stories from './components/stories';
-import Posts from './components/posts';
-
+import TopBar from "./components/topBar";
+import Stories from "./components/stories";
+import Posts from "./components/posts";
+import Camera from "./components/Camera/Camera";
 
 function App() {
- const [stories, setStories] = useState(storiesData);
- const [posts, setPosts] = useState(postsData);
-  console.log(posts);
+  const [section, setSection] = useState("home");
+  const [stories, setStories] = useState(storiesData);
+  const [posts, setPosts] = useState(postsData);
+
+
+  const url = "https://api.npoint.io/c59d0538fafba6432ffe";
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setPosts(data));
+  }, []);
+
+  //   useEffect(() => {
+  //     fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => setStories(data));
+  // }, []);
+
+  const onSectionRender = () => {
+    switch (section) {
+      case "home":
+        return (
+          <>
+            <Stories stories={stories} />
+            <Posts posts={posts} />
+          </>
+        );
+      case "camera":
+        return <Camera />;
+      case "tv":
+        return <h1>TV</h1>;
+      case "messages":
+        return <h1>Chat</h1>;
+    }
+  };
+
   return (
-    <>  
-    <TopBar/>
-    <Stories stories = {stories}/>
-    <Posts posts = {posts}/>
-    
+    <>
+      <TopBar setSection={setSection} />
+      {onSectionRender()}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
