@@ -1,4 +1,5 @@
 .Chat__search{
+ position: relative;
  border-radius: 50px;
  margin-top: 30px;
  width: 100%;
@@ -6,10 +7,36 @@
 }
 
 .Chat__List {
-    list-style: none;
-    
+    list-style: none;   
 }
 
 .Chat__Item {
  margin-top: 20px ;
 }
+
+.Icon{
+    position: absolute;
+    display: flex;
+    position: absolute;
+    transform: translateY(-120%);
+    margin-left: 10px;
+}
+
+.singleChat {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .singleChat__msg {
+    padding: 5px 20px;
+    border-radius: 20px;
+    /* background-color: lightseagreen; */
+    background-image: linear-gradient(
+        314.35deg,
+        #e20337 6.03%,
+        #c60188 40.88%,
+        #7700c3 73.23%
+    );
+    color: white;
+  }

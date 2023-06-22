@@ -1,12 +1,18 @@
 .SingleChat__Content {
+    display: flex;
+    align-items: center;
     padding: 2px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
 
+.SingleChat__Content:active{
+ background-color: lightgrey;    
 }
 
 .SingleChat__Image{
+    display: flex;
     position: relative;
     padding: 2px;
   
@@ -15,12 +21,19 @@
   
     border-radius: 50%;
     margin-bottom: 8px;
-    
 }
-.SingleChat{
-  display: flex;
-  width: 100%;
-  height: 60px;
-  padding: 5px;
-}
+    .SingleChat{ 
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        cursor: pointer;
+    }
 
+ 
+ .SingleChat__lastMessage {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: rgb(113, 113, 113);
+ }
