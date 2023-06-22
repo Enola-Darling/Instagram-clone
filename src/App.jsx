@@ -13,7 +13,7 @@ import Chat from "./components/chat";
 function App() {
   const [section, setSection] = useState("home");
   const [stories, setStories] = useState(storiesData);
-  const [posts, setPosts] = useState(postsData);
+  const [posts, setPosts] = useState([]);
 
 
   const url = "https://api.npoint.io/c59d0538fafba6432ffe";

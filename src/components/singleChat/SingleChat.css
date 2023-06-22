@@ -1,0 +1,26 @@
+.SingleChat__Content {
+    padding: 2px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.SingleChat__Image{
+    position: relative;
+    padding: 2px;
+  
+    width: 62px;
+    height: 62px;
+  
+    border-radius: 50%;
+    margin-bottom: 8px;
+    
+}
+.SingleChat{
+  display: flex;
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+}
+

@@ -3,12 +3,11 @@ import "./Posts.css";
 import Post from "../post";
 
 const Posts = ({ posts }) => {
-  console.log(posts);
   return (
     <div>
-      <ul>
+      <ul className="Posts__List">
         {posts?.map((post) => (
-          <li key={post?.id}>
+          <li className="Posts__Element" key={post?.id}>
             <Post post={post} />
           </li>
         ))}
