@@ -50,7 +50,7 @@ function App() {
       case "home":
         return (
           <>
-            <Stories stories={stories} />
+            <Stories stories={stories} posts={posts} />
             <Posts posts={posts} />
           </>
         );
