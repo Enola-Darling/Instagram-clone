@@ -21,9 +21,11 @@ const Chat = () => {
     switch (chatName) {
       case "": 
         return (
-          <div >
+          <div > 
+            <div >
             <input id="" type="text" name="search" className="Chat__search" />
             <div className="Icon"> <Search/> </div>
+            </div>
             <ul className="Chat__List" >
             {messages.map((chat) => (
                 <li className="Chat__Item" 
@@ -39,7 +41,7 @@ const Chat = () => {
         // console.log(`chatName is not empty: ${chatName}`);
         return (
           <div className="singleChat">
-            <p onClick={() => setChatName("")}>{"<-"}</p>
+            <p className="close__Chat" onClick={() => setChatName("")}>{"❌"}</p>
             {messages.find((c) => c.participants[1].username === chatName)?.messages.map((message) => (
               <p
                 key={"message-" + message.id}

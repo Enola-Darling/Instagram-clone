@@ -54,6 +54,9 @@
   width: 100%;
   height: auto;
 }
+.PostContent .swiper-pagination-bullet {
+  background: rgba(162, 95, 95, 0.967);
+}
 
 .PostActions {
   position: relative;

@@ -15,10 +15,9 @@
 }
 
 .Icon{
-    position: absolute;
+   
     display: flex;
-    position: absolute;
-    transform: translateY(-120%);
+    transform: translateY(-122%);
     margin-left: 10px;
 }
 
@@ -39,4 +38,11 @@
         #7700c3 73.23%
     );
     color: white;
+  }
+
+  .close__Chat {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
   }

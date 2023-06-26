@@ -21,7 +21,22 @@ function App() {
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setPosts(data));
+      .then((data) => {
+          const modifiedData = data.map((p) => {
+          const mediaSample =  p.media[0];
+          if (mediaSample) {
+              const n = Math.floor(Math.random() * 10);
+              for (let i = p.media.length; i < n; i++) {
+                p.media.push({
+                  id: mediaSample.id + `-${i}`,
+                  src: `https://picsum.photos/800/500?${Math.floor(Math.random() * 5000)}`
+                });
+              }
+          }
+          return p;
+        });
+        setPosts(modifiedData);
+      });
   }, []);
 
   //   useEffect(() => {
