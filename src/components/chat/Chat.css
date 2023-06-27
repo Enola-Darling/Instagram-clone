@@ -26,10 +26,60 @@
     flex-direction: column;
     gap: 14px;
   }
+
+  .SingleChat__Image {
+    position: relative;
+    padding: 2px;
+  
+    width: 62px;
+    height: 62px;
+  
+    border-radius: 50%;
+    margin-bottom: 8px;
+  }
+
+  .SingleChat__Image:before{
+    border-radius: 100%;
+    content: "";
+    background-image: linear-gradient(
+        314.35deg,
+        #e20337 6.03%,
+        #c60188 40.88%,
+        #7700c3 73.23%
+    );
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .SingleChat__Image:after {
+    border-radius: 100%;
+    content: "";
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .SingleChat__Image img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    z-index: 1;
+  }
   
   .singleChat__msg {
     padding: 5px 20px;
     border-radius: 20px;
+    z-index: index 2;
     /* background-color: lightseagreen; */
     background-image: linear-gradient(
         314.35deg,
